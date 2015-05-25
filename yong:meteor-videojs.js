@@ -1,6 +1,6 @@
 //Functions to run after the script tag has loaded
 var videojsLoadCallback = function(){
-	videojs.options.flash.swf = 'video-js/video-js.swf';
+	videojs.options.flash.swf = '/video-js/video-js.swf';
 };
 
 //If the script doesn't load
@@ -16,14 +16,14 @@ var head = document.getElementsByTagName('head')[0];
 var style = document.createElement('link');
 style.type = 'text/css';
 style.rel = "stylesheet";
-style.href = 'video-js/video-js.css';
+style.href = '/video-js/video-js.css';
 
 head.appendChild(style);
 
 //Generate a script tag
 var script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = 'video-js/video.js';
+script.src = '/video-js/video.js';
 script.onload = videojsLoadCallback;
 script.onerror = videojsErrorCallback;
 
